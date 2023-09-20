@@ -22,6 +22,7 @@ const Sidebar = () => {
     const router = useRouter();
 
     let { route } = router
+    if (route === '/nova-venda') route = '/'
 
     const renderLinks = links.map((link, i) => (
         <li key={i}>
