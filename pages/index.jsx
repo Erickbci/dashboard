@@ -4,9 +4,11 @@ import SalesGoal from "src/Components/SalesGoal/SalesGoal";
 import SalesHistory from "src/Components/SalesHistory/SalesHistory";
 import TopSales from "src/Components/TopSales/TopSales";
 import Heading from "src/UI/Heading/Heading";
+import client from "src/sanity";
 import styles from 'styles/Dashboard.module.scss'
 
-export default function Home() {
+export default function Home({ orders, products, config }) {
+
   return (
     <section className={styles.dashboard}>
       <Heading 
@@ -28,4 +30,18 @@ export default function Home() {
       </section>
     </section>
   )
+}
+
+export const getServerSideProps = async () => {
+  const orders = await client.fetch('*[_type == "orders"]')
+  const products = await client.fetch('*[_type == "products"]')
+  const config = await client.fetch('*[_type == "config"]')
+
+  return {
+    props: {
+      orders,
+      products,
+      config,
+    },
+  }
 }
