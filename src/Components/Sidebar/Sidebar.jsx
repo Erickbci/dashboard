@@ -23,6 +23,7 @@ const Sidebar = () => {
 
     let { route } = router
     if (route === '/nova-venda') route = '/'
+    if (route === '/produtos/adicionar') route = '/produtos'
 
     const renderLinks = links.map((link, i) => (
         <li key={i}>
