@@ -1,13 +1,26 @@
+import { setConfig } from "src/store/ui-slice";
 import Link from "next/link";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Cards from "src/Components/Card/Cards";
 import SalesGoal from "src/Components/SalesGoal/SalesGoal";
 import SalesHistory from "src/Components/SalesHistory/SalesHistory";
 import TopSales from "src/Components/TopSales/TopSales";
 import Heading from "src/UI/Heading/Heading";
 import client from "src/sanity";
+import { createOrdersWithProduct, populateOrders, populateProducts, populateSales } from "src/store/dashboard-slice";
 import styles from 'styles/Dashboard.module.scss'
 
 export default function Home({ orders, products, config }) {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(populateOrders(orders))
+    dispatch(populateProducts(products))
+    dispatch(createOrdersWithProduct())
+    dispatch(populateSales())
+    dispatch(setConfig(config))
+  }, [])
 
   return (
     <section className={styles.dashboard}>
@@ -35,7 +48,7 @@ export default function Home({ orders, products, config }) {
 export const getServerSideProps = async () => {
   const orders = await client.fetch('*[_type == "orders"]')
   const products = await client.fetch('*[_type == "products"]')
-  const config = await client.fetch('*[_type == "config"]')
+  const config = await client.fetch('*[_type == "config"][0]')
 
   return {
     props: {
