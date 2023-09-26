@@ -10,6 +10,8 @@ import Heading from "src/UI/Heading/Heading";
 import client from "src/sanity";
 import { createOrdersWithProduct, populateOrders, populateProducts, populateSales } from "src/store/dashboard-slice";
 import styles from 'styles/Dashboard.module.scss'
+import HeatMapChart from "src/Components/HighchartDashboards/HeatMapChart/HeatMapChart";
+
 
 export default function Home({ orders, products, config }) {
   const dispatch = useDispatch()
@@ -34,7 +36,7 @@ export default function Home({ orders, products, config }) {
       <section className={styles.columns}>  
         <section className={styles.column1}>  
           <Cards />
-          <SalesHistory />
+          <HeatMapChart />
         </section>
         <section className={styles.column2}>
           <SalesGoal />
