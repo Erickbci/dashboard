@@ -138,7 +138,7 @@ const HeatMapChart = () => {
     colorAxis: {
       min: 0,
       minColor: '#FFFFFF',
-      maxColor: Highcharts.getOptions().colors[0]
+      // maxColor: Highcharts.getOptions().colors[0]
     },
     legend: {
       align: 'right',

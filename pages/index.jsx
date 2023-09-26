@@ -11,6 +11,7 @@ import client from "src/sanity";
 import { createOrdersWithProduct, populateOrders, populateProducts, populateSales } from "src/store/dashboard-slice";
 import styles from 'styles/Dashboard.module.scss'
 import HeatMapChart from "src/Components/HighchartDashboards/HeatMapChart/HeatMapChart";
+import LineChart from "src/Components/HighchartDashboards/LineChart/LineChart";
 
 
 export default function Home({ orders, products, config }) {
@@ -36,7 +37,7 @@ export default function Home({ orders, products, config }) {
       <section className={styles.columns}>  
         <section className={styles.column1}>  
           <Cards />
-          <HeatMapChart />
+          <SalesHistory />
         </section>
         <section className={styles.column2}>
           <SalesGoal />

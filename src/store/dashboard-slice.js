@@ -18,7 +18,7 @@ const initialState = {
 
 const findProduct = (products, order) => {
   const product = products?.find(
-    (product) => product._id === order._ref
+    (product) => product._id === order.product?._ref
   ) || {
     name: 'carregando...',
     price: 0,
