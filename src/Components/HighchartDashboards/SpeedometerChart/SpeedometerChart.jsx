@@ -19,6 +19,7 @@ const SpeedometerChart = ({value}) => {
     const options = {
         chart: {
           type: 'gauge',
+          width: 250
         },
         title: {
           text: 'Meta de vendas diária',

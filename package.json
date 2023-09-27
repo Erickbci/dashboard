@@ -17,6 +17,8 @@
     "@syncfusion/ej2-react-dropdowns": "^20.4.42",
     "@syncfusion/ej2-react-grids": "^20.4.43",
     "@syncfusion/ej2-react-heatmap": "^20.4.42",
+    "ag-grid-community": "^30.2.0",
+    "ag-grid-react": "^30.2.0",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
     "highcharts-react-official": "^3.2.1",
