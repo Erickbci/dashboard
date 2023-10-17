@@ -6,12 +6,14 @@ import {
     MdAttachMoney,
     MdInsertChartOutlined,
     MdOutlineSettings,
+    MdOutlinePeopleOutline
 } from 'react-icons/md'
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 const links = [
     {name: 'painel', icon: <MdOutlineDashboardCustomize />, url: '/'},
+    {name: 'vendedoras', icon: <MdOutlinePeopleOutline />, url: '/vendedoras'},
     {name: 'produtos', icon: <MdOutlineShoppingBag />, url: '/produtos'},
     {name: 'vendas', icon: <MdAttachMoney />, url: '/vendas'},
     {name: 'relatório', icon: <MdInsertChartOutlined />, url: '/relatorio'},

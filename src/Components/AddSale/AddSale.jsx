@@ -3,6 +3,17 @@ const AddSale = () => {
         <form>
             <div>
                 <label htmlFor="dropdown" className='hidden'>
+                    Vendedora
+                </label>
+                <input 
+                    type="text"
+                    name='saller'
+                    id='saller'
+                    placeholder='Vendedora' 
+                />
+            </div>
+            <div>
+                <label htmlFor="dropdown" className='hidden'>
                     Produto
                 </label>
                 input
