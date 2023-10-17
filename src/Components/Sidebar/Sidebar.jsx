@@ -26,6 +26,7 @@ const Sidebar = () => {
     let { route } = router
     if (route === '/nova-venda') route = '/'
     if (route === '/produtos/adicionar') route = '/produtos'
+    if (route === '/vendedoras/adicionar') route = '/vendedoras'
 
     const renderLinks = links.map((link, i) => (
         <li key={i}>
@@ -39,7 +40,7 @@ const Sidebar = () => {
   return (
     <section className={styles.sidebar}>
       <div className={styles.image}>
-        <Image src="/logo.svg" alt="dashboard" width="46" height="43" />
+        <Image color="#f171be" src="/logo.svg" alt="dashboard" width="46" height="43" />
       </div>
       <nav className={styles.navigation}>
         <ul>{renderLinks}</ul>

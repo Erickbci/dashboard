@@ -7,13 +7,13 @@ const columnDefs = [
   { headerName: 'ID', field: 'id' },
   { headerName: 'Vendedora', field: 'seller' },
   { headerName: 'Percentual', field: 'percentage' },
-  { headerName: 'City', field: 'city' }
+  { headerName: 'Profissão', field: 'job' }
 ];
 
 const rowData = [
-  { id: 1, seller: 'John Doe', percentage: 25, city: 'New York' },
-  { id: 2, seller: 'Jane Smith', percentage: 30, city: 'San Francisco' },
-  { id: 3, seller: 'Bob Johnson', percentage: 35, city: 'Chicago' }
+  { id: 1, seller: 'Thais', percentage: 25, job: 'Lash' },
+  { id: 2, seller: 'Joana', percentage: 30, job: 'Manicure/pedicure' },
+  { id: 3, seller: 'Rebeca', percentage: 35, job: 'Designer de sobrancelhas' }
 ];
 const GridChart = () => {
 
